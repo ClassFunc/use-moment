@@ -1,6 +1,6 @@
 {
   "name": "use-moment",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "moment format easy to use",
   "main": "index.ts",
   "scripts": {
@@ -8,11 +8,9 @@
   },
   "author": "duongdam",
   "license": "MIT",
-  "dependencies": {
-    "moment": "^2.29.3",
-    "moment-timezone": "^0.5.34"
-  },
   "devDependencies": {
+    "moment": "^2.29.3",
+    "moment-timezone": "^0.5.34",
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.30",
     "typescript": "^4.7.4"

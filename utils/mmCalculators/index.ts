@@ -5,13 +5,12 @@ const mmToDate = (aTime: DateString) => {
     return moment(aTime).toDate()
 }
 
-
 const mmCalculatorsAdd = (aTime: DateString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
-    return moment(aTime).add(amount, unit)
+    return moment(aTime).add(amount, unit).format()
 }
 
 const mmCalculatorsSubtract = (aTime: DateString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
-    return moment(aTime).subtract(amount, unit)
+    return moment(aTime).subtract(amount, unit).format()
 }
 
 export {
