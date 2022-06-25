@@ -1,35 +1,35 @@
 import moment from "moment";
+import {DateString} from "../../common/typeExportTs";
 
-type Props = {
-    _aTime: Date,
-    _bTime: Date,
+const mmIsSame = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).isSame(bTime)
 }
 
-const mmIsSame = ({_aTime, _bTime}: Props) => {
-    return moment(_aTime).isSame(_bTime)
+const mmIsBefore = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).isBefore(bTime)
 }
 
-const mmIsBefore = ({_aTime, _bTime}: Props) => {
-    return moment(_aTime).isBefore(_bTime)
+const mmIsSameOrBefore = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).isSameOrBefore(bTime)
 }
 
-const mmIsSameOrBefore = ({_aTime, _bTime}: Props) => {
-    return moment(_aTime).isSameOrBefore(_bTime)
+const mmIsAfter = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).isAfter(bTime)
 }
 
-const mmIsAfter = ({_aTime, _bTime}: Props) => {
-    return moment(_aTime).isAfter(_bTime)
+const mmIsSameOrAfter = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).isAfter(bTime)
 }
 
-const mmIsSameOrAfter = ({_aTime, _bTime}: Props) => {
-    return moment(_aTime).isAfter(_bTime)
+const mmIsSameDate = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).isSame(bTime, 'date')
 }
-
 
 export {
     mmIsSame,
     mmIsAfter,
     mmIsBefore,
     mmIsSameOrAfter,
-    mmIsSameOrBefore
+    mmIsSameOrBefore,
+    mmIsSameDate
 }
