@@ -13,8 +13,13 @@ const mmCalculatorsSubtract = (aTime: DateString, amount: moment.DurationInputAr
     return moment(aTime).subtract(amount, unit).format()
 }
 
+const mmCalculatorDiff = (aTime: DateString, bTime: DateString) => {
+    return moment(aTime).diff(bTime)
+}
+
 export {
     mmToDate,
+    mmCalculatorDiff,
     mmCalculatorsAdd,
     mmCalculatorsSubtract
 }
