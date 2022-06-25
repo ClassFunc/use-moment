@@ -1,7 +1,5 @@
 ## use-moment
 
-[![NPM](https://img.shields.io/npm/v/use-moment.svg)](https://www.npmjs.com/package/use-moment) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 ## used
 
 ```js
