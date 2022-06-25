@@ -1,6 +1,6 @@
 import {mmIsAfter, mmIsSame, mmIsSameDate} from "./utils/mmChecks"
 import {mmCalculatorsAdd, mmToDate} from "./utils/mmCalculators";
-import {mmFormat} from "./utils/mmFormats";
+import {mmFormat, mmFormatUTC} from "./utils/mmFormats";
 
 // const {mmIsSame} = mmChecks
 
@@ -8,7 +8,9 @@ let _now = new Date()
 let _now2 = new Date()
 
 console.log(mmFormat(_now))
-//2022-06-25
+//2022-06-25T16:20:48+07:00
+console.log(mmFormatUTC(_now))
+//2022-06-25T09:20:48Z
 console.log(mmIsSame(_now, _now2))
 //true
 console.log(mmIsAfter(_now, _now2))

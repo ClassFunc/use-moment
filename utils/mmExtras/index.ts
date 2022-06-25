@@ -17,6 +17,22 @@ const mmStartOfIsoMonth = (aTime: DateString) => {
     return moment(aTime).startOf("months")
 }
 
+const mmEndOfDay = (aTime: DateString) => {
+    return moment(aTime).endOf("day")
+}
+
+const mmEndOfWeeks = (aTime: DateString) => {
+    return moment(aTime).endOf("weeks")
+}
+
+const mmEndOfIsoWeeks = (aTime: DateString) => {
+    return moment(aTime).endOf("isoWeeks")
+}
+
+const mmEndOfIsoMonth = (aTime: DateString) => {
+    return moment(aTime).endOf("months")
+}
+
 export {
     mmStartOfDay,
     mmStartOfIsoMonth,

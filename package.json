@@ -1,6 +1,6 @@
 {
   "name": "use-moment",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "moment format easy to use",
   "main": "index.ts",
   "scripts": {
