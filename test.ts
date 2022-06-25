@@ -1,6 +1,6 @@
 import {mmIsAfter, mmIsSame, mmIsSameDate} from "./utils/mmChecks"
 import {mmCalculatorDiff, mmCalculatorsAdd, mmToDate} from "./utils/mmCalculators";
-import {mmFormat, mmFormatUTC} from "./utils/mmFormats";
+import {mmFormat, mmFormatUTC, mmFormatYYYYMMDD} from "./utils/mmFormats";
 import {mmStartOfDay} from "./utils/mmExtras";
 
 // const {mmIsSame} = mmChecks
@@ -33,4 +33,7 @@ console.log(mmFormatUTC(mmCalculatorsAdd(_now, 1, 'days'), 'YYYY-MM-DD'))
 //2022-06-26
 
 console.log(mmCalculatorDiff(mmStartOfDay(mmCalculatorsAdd(_now, 1, 'days')), _now))
+//24817480
+
+console.log(mmFormatYYYYMMDD(_now))
 //2022-06-26
