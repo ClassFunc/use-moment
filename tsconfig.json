@@ -15,7 +15,8 @@
   },
   "include": [
     "index.ts",
-    "utils"
+    "utils",
+    "common"
   ],
   "exclude": [
     "node_modules",
