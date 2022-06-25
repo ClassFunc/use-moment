@@ -6,11 +6,11 @@ const mmToDate = (aTime: DateString) => {
 }
 
 const mmCalculatorsAdd = (aTime: DateString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
-    return moment(aTime).add(amount, unit).format()
+    return moment(aTime).add(amount, unit)
 }
 
 const mmCalculatorsSubtract = (aTime: DateString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
-    return moment(aTime).subtract(amount, unit).format()
+    return moment(aTime).subtract(amount, unit)
 }
 
 const mmCalculatorDiff = (aTime: DateString, bTime: DateString) => {
