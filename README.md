@@ -37,3 +37,16 @@ console.log(mmFormatUTC(mmCalculatorsAdd(_now, 1, 'days'), 'YYYY-MM-DD'))
 //2022-06-26
 
 ```
+
+## For next js
+
+```ts
+//use-moment for next-js
+//in next.config.js
+const withTM = require('next-transpile-modules')(['use-moment'])
+
+module.exports = withTM({
+    // next config code
+});
+
+```
