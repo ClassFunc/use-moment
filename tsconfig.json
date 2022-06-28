@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
+    "isolatedModules": true
   },
   "include": [
     "index.ts",
@@ -21,11 +18,5 @@
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
-  ],
-  "ts-node": {
-    "esm": true
-  },
-  "lib": [
-    "esnext"
   ]
 }

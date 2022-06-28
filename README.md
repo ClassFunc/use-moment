@@ -36,17 +36,27 @@ module.exports = withTM({
 
 ## Use package
 
-```html
-import {mmCalculatorsAdd, mmCalculatorsDiff, mmCalculatorsSet, mmToDate} from "./utils/mmCalculators";
+```ts
+
+import {mmFormatDDD} from "use-moment/dist/utils/mmFormats";
+
+or
+import {mmFormats} from "use-moment";
+
+const {mmFormatDDDD} = mmFormats
+
 
 * mmCalculators
 let _now = new Date()
 
-1. mmToDate
+1.
+mmToDate
 mmToDate(_now) // output: 2022-06-28T03:14:40.895Z
-2. mmCalculatorsAdd
+2.
+mmCalculatorsAdd
 mmCalculatorsAdd(_now, 1, 'days') // output: Moment<2022-06-29T10:15:42+07:00>
-3. mmCalculatorsSubtract
+3.
+mmCalculatorsSubtract
 mmCalculatorsSubtract(_now, 1, 'days') // output: Moment<2022-06-27T10:17:31+07:00>
 4. mmCalculatorsDiff
 mmCalculatorsDiff(_now, _now) // output: 0
