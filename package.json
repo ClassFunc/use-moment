@@ -1,7 +1,7 @@
 {
   "name": "use-moment",
-  "version": "1.2.1",
-  "description": "moment format easy to use",
+  "version": "1.2.2",
+  "description": "It's simpler to use moment js",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,13 @@
     "moment-range": "^4.0.2",
     "moment-timezone": "^0.5.34",
     "typescript": "^4.7.4"
-  }
+  },
+  "repository": "https://github.com/ClassFunc/use-moment",
+  "homepage": "https://github.com/duongdam/use-moment",
+  "keywords": [
+    "use moment",
+    "moment",
+    "moment range",
+    "simpler moment js"
+  ]
 }
