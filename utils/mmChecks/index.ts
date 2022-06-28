@@ -1,27 +1,27 @@
 import moment from "moment";
-import {DateString} from "../../common/typeExportTs";
+import {DateMomentString} from "../../common/typeExportTs";
 
-const mmIsSame = (aTime: DateString, bTime: DateString) => {
+const mmIsSame = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isSame(bTime)
 }
 
-const mmIsBefore = (aTime: DateString, bTime: DateString) => {
+const mmIsBefore = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isBefore(bTime)
 }
 
-const mmIsSameOrBefore = (aTime: DateString, bTime: DateString) => {
+const mmIsSameOrBefore = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isSameOrBefore(bTime)
 }
 
-const mmIsAfter = (aTime: DateString, bTime: DateString) => {
+const mmIsAfter = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isAfter(bTime)
 }
 
-const mmIsSameOrAfter = (aTime: DateString, bTime: DateString) => {
+const mmIsSameOrAfter = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isAfter(bTime)
 }
 
-const mmIsSameDate = (aTime: DateString, bTime: DateString) => {
+const mmIsSameDate = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isSame(bTime, 'date')
 }
 

@@ -1,25 +1,30 @@
 import moment from "moment";
-import {DateString} from "../../common/typeExportTs";
+import {DateMomentString} from "../../common/typeExportTs";
 
-const mmToDate = (aTime: DateString) => {
+const mmToDate = (aTime: DateMomentString) => {
     return moment(aTime).toDate()
 }
 
-const mmCalculatorsAdd = (aTime: DateString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
+const mmCalculatorsAdd = (aTime: DateMomentString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
     return moment(aTime).add(amount, unit)
 }
 
-const mmCalculatorsSubtract = (aTime: DateString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
+const mmCalculatorsSubtract = (aTime: DateMomentString, amount: moment.DurationInputArg1, unit: moment.DurationInputArg2) => {
     return moment(aTime).subtract(amount, unit)
 }
 
-const mmCalculatorDiff = (aTime: DateString, bTime: DateString) => {
+const mmCalculatorsDiff = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).diff(bTime)
+}
+
+const mmCalculatorsSet = (aTime: DateMomentString, objectLiteral: moment.MomentSetObject) => {
+    return moment(aTime).set(objectLiteral)
 }
 
 export {
     mmToDate,
-    mmCalculatorDiff,
+    mmCalculatorsSet,
+    mmCalculatorsDiff,
     mmCalculatorsAdd,
     mmCalculatorsSubtract
 }
