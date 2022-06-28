@@ -1,5 +1,5 @@
 import './App.css';
-import {mmFormatDDD} from "use-moment/dist/src/utils/mmFormats";
+import {mmFormatDDD} from "use-moment/dist/utils/mmFormats";
 import {mmFormats} from "use-moment"
 
 const {mmFormatDDDD} = mmFormats
