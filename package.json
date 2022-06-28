@@ -1,9 +1,15 @@
 {
   "name": "use-moment",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "description": "It's simpler to use moment js",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "duongdam",
