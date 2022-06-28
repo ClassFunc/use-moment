@@ -1,12 +1,14 @@
 import {mmIsAfter, mmIsSame, mmIsSameDate} from "./utils/mmChecks"
-import {mmCalculatorDiff, mmCalculatorsAdd, mmToDate} from "./utils/mmCalculators";
+import {mmCalculatorsAdd, mmCalculatorsDiff, mmCalculatorsSet, mmToDate} from "./utils/mmCalculators";
 import {mmFormat, mmFormatUTC, mmFormatYYYYMMDD} from "./utils/mmFormats";
 import {mmStartOfDay} from "./utils/mmExtras";
+import {mmRangeBy, mmRangeByArray, mmRangeOnly} from "./utils/mmRange";
+import {mmByZone, mmGuestZone} from "./utils/mmTimezone";
 
 // const {mmIsSame} = mmChecks
 
 let _now = new Date()
-let _now2 = new Date()
+let _now2 = new Date("2022-06-30")
 
 console.log(mmFormat(_now))
 //2022-06-25T16:45:59+07:00
@@ -32,8 +34,20 @@ console.log(mmToDate(mmCalculatorsAdd(_now, 1, 'days')))
 console.log(mmFormatUTC(mmCalculatorsAdd(_now, 1, 'days'), 'YYYY-MM-DD'))
 //2022-06-26
 
-console.log(mmCalculatorDiff(mmStartOfDay(mmCalculatorsAdd(_now, 1, 'days')), _now))
+console.log(mmCalculatorsDiff(mmStartOfDay(mmCalculatorsAdd(_now, 1, 'days')), _now))
 //24817480
 
 console.log(mmFormatYYYYMMDD(_now))
 //2022-06-26
+
+console.log(mmFormat(mmCalculatorsSet(_now, {hours: 3, minutes: 30, seconds: 30, milliseconds: 30}), "HH:mm"))
+
+console.log(mmRangeOnly(_now, _now2))
+
+console.log(mmRangeBy(_now, _now2, "days"))
+
+console.log(mmRangeByArray(_now, _now2, "days"))
+
+console.log(mmFormat(mmByZone(_now, 'Asia/Tokyo')))
+
+console.log(mmGuestZone())

@@ -1,8 +1,11 @@
 // @ts-ignore
 import moment from "moment";
 
-type DateString = Date | string | moment.Moment
+type DateMomentString = Date | string | moment.Moment
+
+type DateMoment = Date | moment.Moment
 
 export type {
-    DateString
+    DateMoment,
+    DateMomentString
 }
