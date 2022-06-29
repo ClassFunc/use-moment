@@ -10,14 +10,15 @@
 // } from "./utils/mmFormats";
 // import {mmRangeByArray} from "./utils/mmRanges";
 // import {mmByZone, mmGuestZone} from "./utils/mmTimezone";
-import {mmSetLocale} from "./utils/mmLocales";
 import {mmFormat} from "./utils/mmFormats";
 import {djsFormat} from "./dayjs/djsDisplays";
+import {djsSetLocale} from "./dayjs/djsLocales";
 
 let _now = new Date()
 let _now2 = new Date("2022-06-30")
 
-mmSetLocale('vi')
+djsSetLocale('vi-vn')
+
 console.log(mmFormat(_now, "YYYY-MM-DD dd HH:mm"))
 console.log(djsFormat(_now, "YYYY-MM-DD dd HH:mm"))
 

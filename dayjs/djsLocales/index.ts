@@ -4,9 +4,10 @@ const djsSetLocale = (locale: string) => {
     if (!locale)
         locale = "ja"
 
-    import(`dayjs/locale/${locale}.js`).then(() => {
-        dayjs.locale(locale)
-    })
+    let _locale = locale.split("-")[0]
+    import(`dayjs/locale/${_locale}.js`).then(() => {
+        dayjs.locale(_locale)
+    }).catch(e => console.log(e.toString()))
 }
 
 export {
