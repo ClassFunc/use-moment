@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+test.ts
+test.cjs.js
+test.esm.js
+
 # idea
 .idea
 

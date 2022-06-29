@@ -1,0 +1,6 @@
+{
+  "name": "use-moment/timezone",
+  "main": "./index.cjs.js",
+  "module": "./index.esm.js",
+  "typings": "./index.d.ts"
+}

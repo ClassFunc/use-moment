@@ -1,24 +1,34 @@
 {
   "name": "use-moment",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "description": "It's simpler to use moment js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./index.cjs.js",
+  "module": "./index.esm.js",
+  "types": "./index.d.ts",
   "files": [
-    "dist"
+    "**/*.js",
+    "**/*.d.ts",
+    "**/package.json"
   ],
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:tsc": "tsc --build",
+    "clean:tsc": "tsc --build --clean",
+    "build": "node esbuild.cjs",
+    "build:commit": "yarn run build && yarn generate-docs && git add --all && git commit -m 'build'",
+    "watch": "node esbuild-watch.cjs",
+    "generate-docs": "typedoc --plugin typedoc-plugin-markdown --readme ./README.md --out __docs__ index.ts",
+    "pre-publish": "npm publish --dry-run"
   },
   "author": "duongdam",
   "license": "MIT",
   "devDependencies": {
+    "glob": "^7.2.0",
+    "esbuild": "^0.14.29",
+    "@types/lodash": "^4.14.180",
+    "esbuild-plugin-d.ts": "^1.1.0",
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.30",
     "@types/node": "^18.0.0",
-    "dayjs": "^1.11.3",
     "moment": "^2.29.3",
     "moment-range": "^4.0.2",
     "moment-timezone": "^0.5.34",
