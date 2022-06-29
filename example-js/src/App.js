@@ -1,19 +1,18 @@
-import './App.css';
-import {mmFormatDDD} from "use-moment/dist/utils/mmFormats";
-import {mmFormats} from "use-moment"
+import {mmSetLocale} from "use-moment/dist/utils/mmLocales";
+import {mmFormat} from "use-moment/dist/utils/mmFormats";
+import {dayjs} from "use-moment/dist/dayjs/index";
 
-const {mmFormatDDDD} = mmFormats
+dayjs.locale('ja')
+mmSetLocale('ja')
 
 function App() {
+    console.log(mmFormat(new Date(), "YYYY-MM-DD dd HH:mm"))
 
-  console.log(mmFormatDDD(new Date()))
-  console.log(mmFormatDDDD(new Date()))
+    return (
+        <div className="App">
 
-  return (
-      <div className="App">
-
-      </div>
-  );
+        </div>
+    );
 }
 
 export default App;
