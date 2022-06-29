@@ -13,7 +13,8 @@
   "include": [
     "index.ts",
     "utils",
-    "common"
+    "common",
+    "dayjs"
   ],
   "exclude": [
     "node_modules",

@@ -1,9 +1,9 @@
-import * as moment from 'moment';
-import {unitOfTime} from 'moment';
+import * as Moment from "moment";
+import {unitOfTime} from "moment";
 import {extendMoment} from 'moment-range';
 import {DateMoment} from '../../common/typeExportTs';
 
-const mmRange = extendMoment(moment);
+const mmRange = extendMoment(Moment);
 
 const mmRangeOnly = (aTime: DateMoment, bTime: DateMoment) => {
     return mmRange.range(aTime, bTime)

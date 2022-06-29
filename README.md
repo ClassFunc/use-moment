@@ -10,6 +10,7 @@ It's simpler to use moment js
 ## Support for
 
 ```bash
+- Typescript
 - React js
 - Next js
 - Node js
@@ -99,8 +100,9 @@ mmIsSame(_now, _now) // output: true
 13. mmIsoWeeksDays
 
 * mmRanges
-1. mmRange
-import * as moment from 'moment';
+1.
+mmRange
+import * as moment from "../index";
 import {extendMoment} from 'moment-range';
 const mmRange = extendMoment(moment);
 

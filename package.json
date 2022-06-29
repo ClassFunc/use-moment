@@ -1,6 +1,6 @@
 {
   "name": "use-moment",
-  "version": "1.2.5",
+  "version": "1.2.7",
   "description": "It's simpler to use moment js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,6 +17,8 @@
   "devDependencies": {
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.30",
+    "@types/node": "^18.0.0",
+    "dayjs": "^1.11.3",
     "moment": "^2.29.3",
     "moment-range": "^4.0.2",
     "moment-timezone": "^0.5.34",

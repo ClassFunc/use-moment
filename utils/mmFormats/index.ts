@@ -1,5 +1,8 @@
-import moment from "moment"
+import moment from "moment";
 import {DateMomentString} from "../../common/typeExportTs";
+import {mmSetLocale} from "../mmLocales";
+
+mmSetLocale('ja')
 
 const mmFormat = (aTime: DateMomentString, format: string = '') => {
     return moment(aTime).format(format)
