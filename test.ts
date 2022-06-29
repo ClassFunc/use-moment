@@ -12,12 +12,14 @@
 // import {mmByZone, mmGuestZone} from "./utils/mmTimezone";
 import {mmSetLocale} from "./utils/mmLocales";
 import {mmFormat} from "./utils/mmFormats";
+import {djsFormat} from "./dayjs/djsDisplays";
 
 let _now = new Date()
 let _now2 = new Date("2022-06-30")
 
 mmSetLocale('vi')
 console.log(mmFormat(_now, "YYYY-MM-DD dd HH:mm"))
+console.log(djsFormat(_now, "YYYY-MM-DD dd HH:mm"))
 
 // //2022-06-25T16:45:59+07:00
 //
