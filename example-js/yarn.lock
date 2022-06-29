@@ -8419,10 +8419,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-moment@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/use-moment/-/use-moment-1.2.7.tgz#88daef86a1bf11c8cf9a508fe4d5fd6326b675d0"
-  integrity sha512-3Nkko6HhmmTmz0x6xsJwPbz26dV5Gtb8n6q8lf8giMQ1AeKdlEItH6YvEJXTJ8Fyg0kc9FtChw43pXiMZnGa2g==
+use-moment@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/use-moment/-/use-moment-1.2.8.tgz#0b6a4fd2bac8c3646402653284d7f4153f68edd8"
+  integrity sha512-HKsQWqE053xmNyoKKm19RcWLNAhZV6kfepgz3a26vb2Y28aAQgbfjMOHiIRImc/l/iOJHqhigg+dcT4cu6Ld9A==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

@@ -5,6 +5,9 @@ const mmSetLocale = (locale: string) => {
         locale = 'ja'
 
     let _locale = locale.split("-")[0]
+    if (_locale === "en")
+        _locale = "en-gb"
+
     import(`moment/locale/${_locale}`).then(() => {
         moment.locale(_locale)
     }).catch(e => console.log(e.toString()))
