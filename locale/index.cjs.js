@@ -37,7 +37,7 @@ const mmSetLocale = (locale) => {
   let _locale = locale.split("-")[0];
   if (_locale === "en")
     _locale = "en-gb";
-  import(`moment/locale/${_locale}`).then(() => {
+  import(`moment/locale/${_locale}.js`).then(() => {
     import_moment.default.locale(_locale);
   }).catch((e) => console.log(e.toString()));
 };
