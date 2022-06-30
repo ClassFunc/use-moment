@@ -39,39 +39,44 @@ module.exports = withTM({
 
 ```ts
 
-import {mmFormatDDD} from "use-moment/dist/utils/mmFormats";
+import {mmFormatDDD} from "use-moment/format";
+import {mmAdd} from "use-moment/calculator";
+import {mmSetLocale} from "use-moment/locale";
 
-or
-import {mmFormats} from "use-moment";
-
-const {mmFormatDDDD} = mmFormats
-
-
-* mmCalculators
+*
+mmCalculators
 let _now = new Date()
 
 1.
 mmToDate
 mmToDate(_now) // output: 2022-06-28T03:14:40.895Z
 2.
-mmCalculatorsAdd
-mmCalculatorsAdd(_now, 1, 'days') // output: Moment<2022-06-29T10:15:42+07:00>
+mmAdd
+mmAdd(_now, 1, 'days') // output: Moment<2022-06-29T10:15:42+07:00>
 3.
-mmCalculatorsSubtract
-mmCalculatorsSubtract(_now, 1, 'days') // output: Moment<2022-06-27T10:17:31+07:00>
-4. mmCalculatorsDiff
-mmCalculatorsDiff(_now, _now) // output: 0
-5. mmCalculatorsSet
-mmCalculatorsSet(_now, {hours: 3, minutes: 30, seconds: 30, milliseconds: 30}) // output: Moment<2022-06-28T03:30:30+07:00>
+mmSubtract
+mmSubtract(_now, 1, 'days') // output: Moment<2022-06-27T10:17:31+07:00>
+4.
+mmDiff
+mmDiff(_now, _now) // output: 0
+5.
+mmSet
+mmSet(_now, {hours: 3, minutes: 30, seconds: 30, milliseconds: 30}) // output: Moment<2022-06-28T03:30:30+07:00>
 
 * mmChecks
-1. mmIsSame
+1.
+mmIsSame
 mmIsSame(_now, _now) // output: true
-2. mmIsAfter // output: true/false
-3. mmIsBefore // output: true/false
-4. mmIsSameOrAfter // output: true/false
-5. mmIsSameOrBefore // output: true/false
-6. mmIsSameDate // output: true/false
+2.
+mmIsAfter // output: true/false
+3.
+mmIsBefore // output: true/false
+4.
+mmIsSameOrAfter // output: true/false
+5.
+mmIsSameOrBefore // output: true/false
+6.
+mmIsSameDate // output: true/false
 
 * mmFormats
 1. mmFormat // output: 2022-06-28T10:28:23+07:00
