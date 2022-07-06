@@ -28,7 +28,11 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", {value: true
 var calculator_exports = {};
 __export(calculator_exports, {
   mmAdd: () => mmAdd,
+  mmDefault: () => mmDefault,
+  mmDefaultUTC: () => mmDefaultUTC,
   mmDiff: () => mmDiff,
+  mmDuration: () => mmDuration,
+  mmDurationUTC: () => mmDurationUTC,
   mmSet: () => mmSet,
   mmSubtract: () => mmSubtract,
   mmToDate: () => mmToDate
@@ -50,10 +54,30 @@ const mmDiff = (aTime, bTime) => {
 const mmSet = (aTime, objectLiteral) => {
   return (0, import_moment.default)(aTime).set(objectLiteral);
 };
+const mmDefault = (aTime, valueOf = false) => {
+  if (valueOf)
+    return (0, import_moment.default)(aTime).valueOf();
+  return (0, import_moment.default)(aTime);
+};
+const mmDefaultUTC = (aTime, valueOf = false) => {
+  if (valueOf)
+    return (0, import_moment.default)(aTime).utc().valueOf();
+  return (0, import_moment.default)(aTime).utc();
+};
+const mmDuration = (aTime, bTime, divisor) => {
+  return ((0, import_moment.default)(aTime).valueOf() - (0, import_moment.default)(bTime).valueOf()) / divisor;
+};
+const mmDurationUTC = (aTime, bTime, divisor) => {
+  return ((0, import_moment.default)(aTime).utc().valueOf() - (0, import_moment.default)(bTime).utc().valueOf()) / divisor;
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   mmAdd,
+  mmDefault,
+  mmDefaultUTC,
   mmDiff,
+  mmDuration,
+  mmDurationUTC,
   mmSet,
   mmSubtract,
   mmToDate

@@ -1,6 +1,6 @@
 {
   "name": "use-moment",
-  "version": "1.2.13",
+  "version": "1.2.14",
   "description": "It's simpler to use moment js",
   "main": "./index.cjs.js",
   "module": "./index.esm.js",
