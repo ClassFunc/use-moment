@@ -21,10 +21,34 @@ const mmSet = (aTime: DateMomentString, objectLiteral: moment.MomentSetObject) =
     return moment(aTime).set(objectLiteral)
 }
 
+const mmDefault = (aTime: DateMomentString, valueOf: boolean = false) => {
+    if (valueOf)
+        return moment(aTime).valueOf()
+    return moment(aTime)
+}
+
+const mmDefaultUTC = (aTime: DateMomentString, valueOf: boolean = false) => {
+    if (valueOf)
+        return moment(aTime).utc().valueOf()
+    return moment(aTime).utc()
+}
+
+const mmDuration = (aTime: DateMomentString, bTime: DateMomentString, divisor: number) => {
+    return (moment(aTime).valueOf() - moment(bTime).valueOf()) / divisor
+}
+
+const mmDurationUTC = (aTime: DateMomentString, bTime: DateMomentString, divisor: number) => {
+    return (moment(aTime).utc().valueOf() - moment(bTime).utc().valueOf()) / divisor
+}
+
 export {
     mmToDate,
     mmSet,
     mmDiff,
     mmAdd,
-    mmSubtract
+    mmSubtract,
+    mmDefault,
+    mmDefaultUTC,
+    mmDuration,
+    mmDurationUTC
 }
