@@ -19,4 +19,8 @@ declare const mmWeeksDay: (aTime: DateMomentString, week: number, day: number) =
 declare const mmWeeksDays: (aTime: DateMomentString, weeks: number, days: number) => moment.Moment;
 declare const mmWeek: (aTime: DateMomentString, week?: number) => number | moment.Moment;
 declare const mmWeeks: (aTime: DateMomentString, week?: number) => number | moment.Moment;
-export { mmStartOfDay, mmStartOfWeeks, mmStartOfIsoWeeks, mmStartOfMonth, mmStartOfMonths, mmEndOfDay, mmEndOfWeek, mmEndOfWeeks, mmEndOfIsoWeeks, mmEndOfMonth, mmEndOfMonths, mmIsoWeekDay, mmIsoWeeksDays, mmWeek, mmWeeks, mmWeekDay, mmWeekDays, mmWeeksDay, mmWeeksDays };
+declare const mmMonth: (aTime: DateMomentString, month?: number | string) => number | moment.Moment;
+declare const mmMonths: (aTime: DateMomentString, month?: number | string) => number | moment.Moment;
+declare const mmDate: (aTime: DateMomentString, date?: number) => number | moment.Moment;
+declare const mmDates: (aTime: DateMomentString, date?: number) => number | moment.Moment;
+export { mmStartOfDay, mmStartOfWeeks, mmStartOfIsoWeeks, mmStartOfMonth, mmStartOfMonths, mmEndOfDay, mmEndOfWeek, mmEndOfWeeks, mmEndOfIsoWeeks, mmEndOfMonth, mmEndOfMonths, mmIsoWeekDay, mmIsoWeeksDays, mmWeek, mmWeeks, mmWeekDay, mmWeekDays, mmWeeksDay, mmWeeksDays, mmDate, mmDates, mmMonth, mmMonths };

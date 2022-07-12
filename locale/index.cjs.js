@@ -35,11 +35,11 @@ const mmSetLocale = (locale) => {
     if (!locale)
         locale = "ja";
     let _locale = locale.split("-")[0];
-  if (_locale === "en")
-    _locale = "en-gb";
-  import(`moment/locale/${_locale}.js`).then(() => {
-    import_moment.default.locale(_locale);
-  }).catch((e) => console.log(e.toString()));
+    if (_locale === "en")
+        _locale = "en-gb";
+    import(`moment/locale/${_locale}.js`).then(() => {
+        import_moment.default.locale(_locale);
+    }).catch((e) => console.log(e.toString()));
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

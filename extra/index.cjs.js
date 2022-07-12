@@ -27,6 +27,8 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", {value: true}), mod);
 var extra_exports = {};
 __export(extra_exports, {
+    mmDate: () => mmDate,
+    mmDates: () => mmDates,
     mmEndOfDay: () => mmEndOfDay,
     mmEndOfIsoWeeks: () => mmEndOfIsoWeeks,
     mmEndOfMonth: () => mmEndOfMonth,
@@ -35,6 +37,8 @@ __export(extra_exports, {
     mmEndOfWeeks: () => mmEndOfWeeks,
     mmIsoWeekDay: () => mmIsoWeekDay,
     mmIsoWeeksDays: () => mmIsoWeeksDays,
+    mmMonth: () => mmMonth,
+    mmMonths: () => mmMonths,
     mmStartOfDay: () => mmStartOfDay,
     mmStartOfIsoWeeks: () => mmStartOfIsoWeeks,
     mmStartOfMonth: () => mmStartOfMonth,
@@ -111,8 +115,30 @@ const mmWeeks = (aTime, week) => {
         return (0, import_moment.default)(aTime).weeks(week);
     return (0, import_moment.default)(aTime).weeks();
 };
+const mmMonth = (aTime, month) => {
+    if (!(0, import_lodash.isUndefined)(month))
+        return (0, import_moment.default)(aTime).month(month);
+    return (0, import_moment.default)(aTime).month();
+};
+const mmMonths = (aTime, month) => {
+    if (!(0, import_lodash.isUndefined)(month))
+        return (0, import_moment.default)(aTime).months(month);
+    return (0, import_moment.default)(aTime).months();
+};
+const mmDate = (aTime, date) => {
+    if (!(0, import_lodash.isUndefined)(date))
+        return (0, import_moment.default)(aTime).date(date);
+    return (0, import_moment.default)(aTime).month();
+};
+const mmDates = (aTime, date) => {
+    if (!(0, import_lodash.isUndefined)(date))
+        return (0, import_moment.default)(aTime).dates(date);
+    return (0, import_moment.default)(aTime).dates();
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+    mmDate,
+    mmDates,
     mmEndOfDay,
     mmEndOfIsoWeeks,
     mmEndOfMonth,
@@ -121,6 +147,8 @@ const mmWeeks = (aTime, week) => {
     mmEndOfWeeks,
     mmIsoWeekDay,
     mmIsoWeeksDays,
+    mmMonth,
+    mmMonths,
     mmStartOfDay,
     mmStartOfIsoWeeks,
     mmStartOfMonth,

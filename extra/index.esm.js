@@ -63,7 +63,29 @@ const mmWeeks = (aTime, week) => {
     return moment(aTime).weeks(week);
   return moment(aTime).weeks();
 };
+const mmMonth = (aTime, month) => {
+  if (!isUndefined(month))
+    return moment(aTime).month(month);
+  return moment(aTime).month();
+};
+const mmMonths = (aTime, month) => {
+  if (!isUndefined(month))
+    return moment(aTime).months(month);
+  return moment(aTime).months();
+};
+const mmDate = (aTime, date) => {
+  if (!isUndefined(date))
+    return moment(aTime).date(date);
+  return moment(aTime).month();
+};
+const mmDates = (aTime, date) => {
+  if (!isUndefined(date))
+    return moment(aTime).dates(date);
+  return moment(aTime).dates();
+};
 export {
+  mmDate,
+  mmDates,
   mmEndOfDay,
   mmEndOfIsoWeeks,
   mmEndOfMonth,
@@ -72,6 +94,8 @@ export {
   mmEndOfWeeks,
   mmIsoWeekDay,
   mmIsoWeeksDays,
+  mmMonth,
+  mmMonths,
   mmStartOfDay,
   mmStartOfIsoWeeks,
   mmStartOfMonth,

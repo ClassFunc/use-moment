@@ -83,6 +83,30 @@ const mmWeeks = (aTime: DateMomentString, week?: number) => {
     return moment(aTime).weeks()
 }
 
+const mmMonth = (aTime: DateMomentString, month?: number | string) => {
+    if (!isUndefined(month))
+        return moment(aTime).month(month)
+    return moment(aTime).month()
+}
+
+const mmMonths = (aTime: DateMomentString, month?: number | string) => {
+    if (!isUndefined(month))
+        return moment(aTime).months(month)
+    return moment(aTime).months()
+}
+
+const mmDate = (aTime: DateMomentString, date?: number) => {
+    if (!isUndefined(date))
+        return moment(aTime).date(date)
+    return moment(aTime).month()
+}
+
+const mmDates = (aTime: DateMomentString, date?: number) => {
+    if (!isUndefined(date))
+        return moment(aTime).dates(date)
+    return moment(aTime).dates()
+}
+
 export {
     mmStartOfDay,
     mmStartOfWeeks,
@@ -102,5 +126,9 @@ export {
     mmWeekDay,
     mmWeekDays,
     mmWeeksDay,
-    mmWeeksDays
+    mmWeeksDays,
+    mmDate,
+    mmDates,
+    mmMonth,
+    mmMonths
 }
