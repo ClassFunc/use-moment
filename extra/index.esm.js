@@ -1,5 +1,6 @@
 "use strict";
 import moment from "moment";
+import {isUndefined} from "lodash";
 
 const mmStartOfDay = (aTime) => {
   return moment(aTime).startOf("day");
@@ -40,6 +41,28 @@ const mmIsoWeekDay = (aTime, week, day) => {
 const mmIsoWeeksDays = (aTime, weeks, days) => {
   return moment(aTime).isoWeeks(weeks).days(days);
 };
+const mmWeekDay = (aTime, week, day) => {
+  return moment(aTime).week(week).day(day);
+};
+const mmWeekDays = (aTime, weeks, days) => {
+  return moment(aTime).week(weeks).days(days);
+};
+const mmWeeksDay = (aTime, week, day) => {
+  return moment(aTime).weeks(week).day(day);
+};
+const mmWeeksDays = (aTime, weeks, days) => {
+  return moment(aTime).weeks(weeks).days(days);
+};
+const mmWeek = (aTime, week) => {
+  if (!isUndefined(week))
+    return moment(aTime).week(week);
+  return moment(aTime).week();
+};
+const mmWeeks = (aTime, week) => {
+  if (!isUndefined(week))
+    return moment(aTime).weeks(week);
+  return moment(aTime).weeks();
+};
 export {
   mmEndOfDay,
   mmEndOfIsoWeeks,
@@ -53,5 +76,11 @@ export {
   mmStartOfIsoWeeks,
   mmStartOfMonth,
   mmStartOfMonths,
-  mmStartOfWeeks
+  mmStartOfWeeks,
+  mmWeek,
+  mmWeekDay,
+  mmWeekDays,
+  mmWeeks,
+  mmWeeksDay,
+  mmWeeksDays
 };

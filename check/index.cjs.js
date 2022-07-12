@@ -29,6 +29,7 @@ var check_exports = {};
 __export(check_exports, {
     mmIsAfter: () => mmIsAfter,
     mmIsBefore: () => mmIsBefore,
+    mmIsBetween: () => mmIsBetween,
     mmIsSame: () => mmIsSame,
     mmIsSameDate: () => mmIsSameDate,
     mmIsSameOrAfter: () => mmIsSameOrAfter,
@@ -38,6 +39,9 @@ module.exports = __toCommonJS(check_exports);
 var import_moment = __toESM(require("moment"));
 const mmIsSame = (aTime, bTime) => {
     return (0, import_moment.default)(aTime).isSame(bTime);
+};
+const mmIsBetween = (aTime, bTime, cTime) => {
+    return (0, import_moment.default)(aTime).isBetween(bTime, cTime);
 };
 const mmIsBefore = (aTime, bTime) => {
     return (0, import_moment.default)(aTime).isBefore(bTime);
@@ -58,6 +62,7 @@ const mmIsSameDate = (aTime, bTime) => {
 0 && (module.exports = {
     mmIsAfter,
     mmIsBefore,
+    mmIsBetween,
     mmIsSame,
     mmIsSameDate,
     mmIsSameOrAfter,

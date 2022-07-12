@@ -6,6 +6,10 @@ const mmIsSame = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isSame(bTime)
 }
 
+const mmIsBetween = (aTime: DateMomentString, bTime: DateMomentString, cTime: DateMomentString) => {
+    return moment(aTime).isBetween(bTime, cTime)
+}
+
 const mmIsBefore = (aTime: DateMomentString, bTime: DateMomentString) => {
     return moment(aTime).isBefore(bTime)
 }
@@ -32,5 +36,6 @@ export {
     mmIsBefore,
     mmIsSameOrAfter,
     mmIsSameOrBefore,
-    mmIsSameDate
+    mmIsSameDate,
+    mmIsBetween
 }

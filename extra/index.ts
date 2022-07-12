@@ -1,4 +1,5 @@
 import moment from "moment";
+import {isUndefined} from "lodash";
 
 type DateMomentString = Date | string | moment.Moment
 
@@ -54,6 +55,34 @@ const mmIsoWeeksDays = (aTime: DateMomentString, weeks: number, days: number) =>
     return moment(aTime).isoWeeks(weeks).days(days)
 }
 
+const mmWeekDay = (aTime: DateMomentString, week: number, day: number) => {
+    return moment(aTime).week(week).day(day)
+}
+
+const mmWeekDays = (aTime: DateMomentString, weeks: number, days: number) => {
+    return moment(aTime).week(weeks).days(days)
+}
+
+const mmWeeksDay = (aTime: DateMomentString, week: number, day: number) => {
+    return moment(aTime).weeks(week).day(day)
+}
+
+const mmWeeksDays = (aTime: DateMomentString, weeks: number, days: number) => {
+    return moment(aTime).weeks(weeks).days(days)
+}
+
+const mmWeek = (aTime: DateMomentString, week?: number) => {
+    if (!isUndefined(week))
+        return moment(aTime).week(week)
+    return moment(aTime).week()
+}
+
+const mmWeeks = (aTime: DateMomentString, week?: number) => {
+    if (!isUndefined(week))
+        return moment(aTime).weeks(week)
+    return moment(aTime).weeks()
+}
+
 export {
     mmStartOfDay,
     mmStartOfWeeks,
@@ -67,5 +96,11 @@ export {
     mmEndOfMonth,
     mmEndOfMonths,
     mmIsoWeekDay,
-    mmIsoWeeksDays
+    mmIsoWeeksDays,
+    mmWeek,
+    mmWeeks,
+    mmWeekDay,
+    mmWeekDays,
+    mmWeeksDay,
+    mmWeeksDays
 }

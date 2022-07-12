@@ -39,12 +39,19 @@ __export(extra_exports, {
     mmStartOfIsoWeeks: () => mmStartOfIsoWeeks,
     mmStartOfMonth: () => mmStartOfMonth,
     mmStartOfMonths: () => mmStartOfMonths,
-    mmStartOfWeeks: () => mmStartOfWeeks
+    mmStartOfWeeks: () => mmStartOfWeeks,
+    mmWeek: () => mmWeek,
+    mmWeekDay: () => mmWeekDay,
+    mmWeekDays: () => mmWeekDays,
+    mmWeeks: () => mmWeeks,
+    mmWeeksDay: () => mmWeeksDay,
+    mmWeeksDays: () => mmWeeksDays
 });
 module.exports = __toCommonJS(extra_exports);
 var import_moment = __toESM(require("moment"));
+var import_lodash = require("lodash");
 const mmStartOfDay = (aTime) => {
-  return (0, import_moment.default)(aTime).startOf("day");
+    return (0, import_moment.default)(aTime).startOf("day");
 };
 const mmStartOfWeeks = (aTime) => {
   return (0, import_moment.default)(aTime).startOf("weeks");
@@ -74,27 +81,55 @@ const mmEndOfMonth = (aTime) => {
   return (0, import_moment.default)(aTime).endOf("month");
 };
 const mmEndOfMonths = (aTime) => {
-  return (0, import_moment.default)(aTime).endOf("months");
+    return (0, import_moment.default)(aTime).endOf("months");
 };
 const mmIsoWeekDay = (aTime, week, day) => {
-  return (0, import_moment.default)(aTime).isoWeek(week).day(day);
+    return (0, import_moment.default)(aTime).isoWeek(week).day(day);
 };
 const mmIsoWeeksDays = (aTime, weeks, days) => {
-  return (0, import_moment.default)(aTime).isoWeeks(weeks).days(days);
+    return (0, import_moment.default)(aTime).isoWeeks(weeks).days(days);
+};
+const mmWeekDay = (aTime, week, day) => {
+    return (0, import_moment.default)(aTime).week(week).day(day);
+};
+const mmWeekDays = (aTime, weeks, days) => {
+    return (0, import_moment.default)(aTime).week(weeks).days(days);
+};
+const mmWeeksDay = (aTime, week, day) => {
+    return (0, import_moment.default)(aTime).weeks(week).day(day);
+};
+const mmWeeksDays = (aTime, weeks, days) => {
+    return (0, import_moment.default)(aTime).weeks(weeks).days(days);
+};
+const mmWeek = (aTime, week) => {
+    if (!(0, import_lodash.isUndefined)(week))
+        return (0, import_moment.default)(aTime).week(week);
+    return (0, import_moment.default)(aTime).week();
+};
+const mmWeeks = (aTime, week) => {
+    if (!(0, import_lodash.isUndefined)(week))
+        return (0, import_moment.default)(aTime).weeks(week);
+    return (0, import_moment.default)(aTime).weeks();
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  mmEndOfDay,
-  mmEndOfIsoWeeks,
-  mmEndOfMonth,
-  mmEndOfMonths,
-  mmEndOfWeek,
-  mmEndOfWeeks,
-  mmIsoWeekDay,
-  mmIsoWeeksDays,
-  mmStartOfDay,
-  mmStartOfIsoWeeks,
-  mmStartOfMonth,
-  mmStartOfMonths,
-  mmStartOfWeeks
+    mmEndOfDay,
+    mmEndOfIsoWeeks,
+    mmEndOfMonth,
+    mmEndOfMonths,
+    mmEndOfWeek,
+    mmEndOfWeeks,
+    mmIsoWeekDay,
+    mmIsoWeeksDays,
+    mmStartOfDay,
+    mmStartOfIsoWeeks,
+    mmStartOfMonth,
+    mmStartOfMonths,
+    mmStartOfWeeks,
+    mmWeek,
+    mmWeekDay,
+    mmWeekDays,
+    mmWeeks,
+    mmWeeksDay,
+    mmWeeksDays
 });

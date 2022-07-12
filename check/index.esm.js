@@ -4,6 +4,9 @@ import moment from "moment";
 const mmIsSame = (aTime, bTime) => {
   return moment(aTime).isSame(bTime);
 };
+const mmIsBetween = (aTime, bTime, cTime) => {
+  return moment(aTime).isBetween(bTime, cTime);
+};
 const mmIsBefore = (aTime, bTime) => {
   return moment(aTime).isBefore(bTime);
 };
@@ -22,6 +25,7 @@ const mmIsSameDate = (aTime, bTime) => {
 export {
   mmIsAfter,
   mmIsBefore,
+  mmIsBetween,
   mmIsSame,
   mmIsSameDate,
   mmIsSameOrAfter,
