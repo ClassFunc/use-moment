@@ -107,6 +107,18 @@ const mmDates = (aTime: DateMomentString, date?: number) => {
     return moment(aTime).dates()
 }
 
+const mmWeekday = (aTime: DateMomentString, day?: number) => {
+    if (!isUndefined(day))
+        return moment(aTime).weekday(day)
+    return moment(aTime).weekday()
+}
+
+const mmIsoWeekday = (aTime: DateMomentString, day?: number) => {
+    if (!isUndefined(day))
+        return moment(aTime).isoWeekday(day)
+    return moment(aTime).isoWeekday()
+}
+
 export {
     mmStartOfDay,
     mmStartOfWeeks,
@@ -130,5 +142,7 @@ export {
     mmDate,
     mmDates,
     mmMonth,
-    mmMonths
+    mmMonths,
+    mmIsoWeekday,
+    mmWeekday
 }

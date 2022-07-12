@@ -36,6 +36,7 @@ __export(extra_exports, {
     mmEndOfWeek: () => mmEndOfWeek,
     mmEndOfWeeks: () => mmEndOfWeeks,
     mmIsoWeekDay: () => mmIsoWeekDay,
+    mmIsoWeekday: () => mmIsoWeekday,
     mmIsoWeeksDays: () => mmIsoWeeksDays,
     mmMonth: () => mmMonth,
     mmMonths: () => mmMonths,
@@ -47,6 +48,7 @@ __export(extra_exports, {
     mmWeek: () => mmWeek,
     mmWeekDay: () => mmWeekDay,
     mmWeekDays: () => mmWeekDays,
+    mmWeekday: () => mmWeekday,
     mmWeeks: () => mmWeeks,
     mmWeeksDay: () => mmWeeksDay,
     mmWeeksDays: () => mmWeeksDays
@@ -135,6 +137,16 @@ const mmDates = (aTime, date) => {
         return (0, import_moment.default)(aTime).dates(date);
     return (0, import_moment.default)(aTime).dates();
 };
+const mmWeekday = (aTime, day) => {
+    if (!(0, import_lodash.isUndefined)(day))
+        return (0, import_moment.default)(aTime).weekday(day);
+    return (0, import_moment.default)(aTime).weekday();
+};
+const mmIsoWeekday = (aTime, day) => {
+    if (!(0, import_lodash.isUndefined)(day))
+        return (0, import_moment.default)(aTime).isoWeekday(day);
+    return (0, import_moment.default)(aTime).isoWeekday();
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     mmDate,
@@ -146,6 +158,7 @@ const mmDates = (aTime, date) => {
     mmEndOfWeek,
     mmEndOfWeeks,
     mmIsoWeekDay,
+    mmIsoWeekday,
     mmIsoWeeksDays,
     mmMonth,
     mmMonths,
@@ -157,6 +170,7 @@ const mmDates = (aTime, date) => {
     mmWeek,
     mmWeekDay,
     mmWeekDays,
+    mmWeekday,
     mmWeeks,
     mmWeeksDay,
     mmWeeksDays

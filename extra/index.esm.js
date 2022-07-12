@@ -83,6 +83,16 @@ const mmDates = (aTime, date) => {
     return moment(aTime).dates(date);
   return moment(aTime).dates();
 };
+const mmWeekday = (aTime, day) => {
+  if (!isUndefined(day))
+    return moment(aTime).weekday(day);
+  return moment(aTime).weekday();
+};
+const mmIsoWeekday = (aTime, day) => {
+  if (!isUndefined(day))
+    return moment(aTime).isoWeekday(day);
+  return moment(aTime).isoWeekday();
+};
 export {
   mmDate,
   mmDates,
@@ -93,6 +103,7 @@ export {
   mmEndOfWeek,
   mmEndOfWeeks,
   mmIsoWeekDay,
+  mmIsoWeekday,
   mmIsoWeeksDays,
   mmMonth,
   mmMonths,
@@ -104,6 +115,7 @@ export {
   mmWeek,
   mmWeekDay,
   mmWeekDays,
+  mmWeekday,
   mmWeeks,
   mmWeeksDay,
   mmWeeksDays
