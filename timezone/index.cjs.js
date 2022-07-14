@@ -28,18 +28,33 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", {value: true
 var timezone_exports = {};
 __export(timezone_exports, {
     mmByZone: () => mmByZone,
+    mmGTM: () => mmGTM,
     mmGuestZone: () => mmGuestZone
 });
 module.exports = __toCommonJS(timezone_exports);
 var import_moment_timezone = __toESM(require("moment-timezone"));
+var import_moment = __toESM(require("moment"));
 const mmByZone = (time, zone) => {
     return import_moment_timezone.default.tz(time, zone);
 };
 const mmGuestZone = () => {
     return import_moment_timezone.default.tz.guess();
 };
+const mmGTM = (timezone) => {
+    let result;
+    const tz = timezone ? +import_moment.default.tz(timezone).format("ZZ") / 100 : +(0, import_moment.default)().format("ZZ") / 100;
+    const isInt = Number.isInteger(tz);
+    if (!isInt) {
+        result = `${`${tz}`.replace(".", ":")}0`;
+        result = ["-", "+"].includes(`${result}`.charAt(0)) ? `${result}` : `+${result}`;
+    } else {
+        result = ["-", "+"].includes(`${tz}`.charAt(0)) ? `${tz}` : `+${tz}`;
+    }
+    return `GTM${result}`;
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
     mmByZone,
+    mmGTM,
     mmGuestZone
 });
