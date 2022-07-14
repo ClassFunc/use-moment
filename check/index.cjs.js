@@ -37,26 +37,26 @@ __export(check_exports, {
 });
 module.exports = __toCommonJS(check_exports);
 var import_moment = __toESM(require("moment"));
-const mmIsSame = (aTime, bTime) => {
-    return (0, import_moment.default)(aTime).isSame(bTime);
+const mmIsSame = (aTime, bTime, granularity) => {
+    return (0, import_moment.default)(aTime).isSame(bTime, granularity);
 };
-const mmIsBetween = (aTime, bTime, cTime) => {
-    return (0, import_moment.default)(aTime).isBetween(bTime, cTime);
+const mmIsBetween = (aTime, bTime, cTime, granularity, inclusivity) => {
+    return (0, import_moment.default)(aTime).isBetween(bTime, cTime, granularity, inclusivity);
 };
-const mmIsBefore = (aTime, bTime) => {
-    return (0, import_moment.default)(aTime).isBefore(bTime);
+const mmIsBefore = (aTime, bTime, granularity) => {
+    return (0, import_moment.default)(aTime).isBefore(bTime, granularity);
 };
-const mmIsSameOrBefore = (aTime, bTime) => {
-    return (0, import_moment.default)(aTime).isSameOrBefore(bTime);
+const mmIsSameOrBefore = (aTime, bTime, granularity) => {
+    return (0, import_moment.default)(aTime).isSameOrBefore(bTime, granularity);
 };
-const mmIsAfter = (aTime, bTime) => {
-    return (0, import_moment.default)(aTime).isAfter(bTime);
+const mmIsAfter = (aTime, bTime, granularity) => {
+    return (0, import_moment.default)(aTime).isAfter(bTime, granularity);
 };
-const mmIsSameOrAfter = (aTime, bTime) => {
-    return (0, import_moment.default)(aTime).isAfter(bTime);
+const mmIsSameOrAfter = (aTime, bTime, granularity) => {
+    return (0, import_moment.default)(aTime).isAfter(bTime, granularity);
 };
-const mmIsSameDate = (aTime, bTime) => {
-    return (0, import_moment.default)(aTime).isSame(bTime, "date");
+const mmIsSameDate = (aTime, bTime, granularity = "date") => {
+    return (0, import_moment.default)(aTime).isSame(bTime, granularity);
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

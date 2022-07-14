@@ -1,26 +1,26 @@
 "use strict";
 import moment from "moment";
 
-const mmIsSame = (aTime, bTime) => {
-  return moment(aTime).isSame(bTime);
+const mmIsSame = (aTime, bTime, granularity) => {
+  return moment(aTime).isSame(bTime, granularity);
 };
-const mmIsBetween = (aTime, bTime, cTime) => {
-  return moment(aTime).isBetween(bTime, cTime);
+const mmIsBetween = (aTime, bTime, cTime, granularity, inclusivity) => {
+  return moment(aTime).isBetween(bTime, cTime, granularity, inclusivity);
 };
-const mmIsBefore = (aTime, bTime) => {
-  return moment(aTime).isBefore(bTime);
+const mmIsBefore = (aTime, bTime, granularity) => {
+  return moment(aTime).isBefore(bTime, granularity);
 };
-const mmIsSameOrBefore = (aTime, bTime) => {
-  return moment(aTime).isSameOrBefore(bTime);
+const mmIsSameOrBefore = (aTime, bTime, granularity) => {
+  return moment(aTime).isSameOrBefore(bTime, granularity);
 };
-const mmIsAfter = (aTime, bTime) => {
-  return moment(aTime).isAfter(bTime);
+const mmIsAfter = (aTime, bTime, granularity) => {
+  return moment(aTime).isAfter(bTime, granularity);
 };
-const mmIsSameOrAfter = (aTime, bTime) => {
-  return moment(aTime).isAfter(bTime);
+const mmIsSameOrAfter = (aTime, bTime, granularity) => {
+  return moment(aTime).isAfter(bTime, granularity);
 };
-const mmIsSameDate = (aTime, bTime) => {
-  return moment(aTime).isSame(bTime, "date");
+const mmIsSameDate = (aTime, bTime, granularity = "date") => {
+  return moment(aTime).isSame(bTime, granularity);
 };
 export {
   mmIsAfter,
