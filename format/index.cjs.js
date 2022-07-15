@@ -39,8 +39,6 @@ __export(format_exports, {
 });
 module.exports = __toCommonJS(format_exports);
 var import_moment = __toESM(require("moment"));
-var import_locale = require("../locale");
-(0, import_locale.mmSetLocale)("ja");
 const mmFormat = (aTime, format = "") => {
     return (0, import_moment.default)(aTime).format(format);
 };

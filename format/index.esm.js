@@ -1,8 +1,6 @@
 "use strict";
 import moment from "moment";
-import {mmSetLocale} from "../locale";
 
-mmSetLocale("ja");
 const mmFormat = (aTime, format = "") => {
   return moment(aTime).format(format);
 };
