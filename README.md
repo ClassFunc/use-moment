@@ -2,10 +2,11 @@
 
 It's simpler to use moment js
 
-- Khai báo một lần, sử dụng mãi mãi
-- Không bị lặp lại import moment ở mọi nơi
-- Không bị lặp lại code ở mọi nơi
-- Cơ động và thực chiến
+## Notice
+
+The moment js library has a very large capacity, so we have written use-dayjs with the same mechanism but the capacity
+is very small, you can refer to:
+[https://www.npmjs.com/package/use-dayjs](https://www.npmjs.com/package/use-dayjs)
 
 ## Support for
 
