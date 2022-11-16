@@ -1,6 +1,6 @@
 import moment, {unitOfTime} from "moment";
 
-type DateMomentString = Date | string | moment.Moment
+type DateMomentString = Date | string | moment.Moment | moment.MomentInput
 
 const mmIsSame = (aTime: DateMomentString, bTime: DateMomentString, granularity?: unitOfTime.StartOf) => {
     return moment(aTime).isSame(bTime, granularity)

@@ -1,5 +1,5 @@
 import moment, { unitOfTime } from "moment";
-declare type DateMomentString = Date | string | moment.Moment;
+declare type DateMomentString = Date | string | moment.Moment | moment.MomentInput;
 declare const mmIsSame: (aTime: DateMomentString, bTime: DateMomentString, granularity?: unitOfTime.StartOf) => boolean;
 declare const mmIsBetween: (aTime: DateMomentString, bTime: DateMomentString, cTime: DateMomentString, granularity?: unitOfTime.StartOf, inclusivity?: "()" | "[)" | "(]" | "[]") => boolean;
 declare const mmIsBefore: (aTime: DateMomentString, bTime: DateMomentString, granularity?: unitOfTime.StartOf) => boolean;

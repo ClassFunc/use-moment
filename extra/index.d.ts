@@ -1,5 +1,5 @@
 import moment from "moment";
-declare type DateMomentString = Date | string | moment.Moment;
+declare type DateMomentString = Date | string | moment.Moment | moment.MomentInput;
 declare const mmStartOfDay: (aTime: DateMomentString) => moment.Moment;
 declare const mmStartOfWeeks: (aTime: DateMomentString) => moment.Moment;
 declare const mmStartOfIsoWeeks: (aTime: DateMomentString) => moment.Moment;

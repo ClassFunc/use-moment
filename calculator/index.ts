@@ -1,6 +1,7 @@
 import moment from "moment";
 
-type DateMomentString = Date | string | moment.Moment
+type DateMomentString = Date | string | moment.Moment | moment.MomentInput
+
 const mmToDate = (aTime: DateMomentString) => {
     return moment(aTime).toDate()
 }

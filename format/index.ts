@@ -1,6 +1,6 @@
 import moment from "moment";
 
-type DateMomentString = Date | string | moment.Moment
+type DateMomentString = Date | string | moment.Moment | moment.MomentInput
 
 const mmFormat = (aTime: DateMomentString, format: string = '') => {
     return moment(aTime).format(format)
@@ -37,7 +37,12 @@ const mmFormatYYYYMMDDHHMMSSZ = (aTime: DateMomentString) => {
     return moment(aTime).utc().format("YYYYMMDDTHHmmss") + "Z"
 }
 
+const mmExp = (aTime: DateMomentString) => {
+    return moment(aTime)
+}
+
 export {
+    mmExp,
     mmFormat,
     mmFormatUTC,
     mmFormatDDD,

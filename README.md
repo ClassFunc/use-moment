@@ -22,18 +22,6 @@ is very small, you can refer to:
 ```html
 npm i --save use-moment
 yarn add use-moment
-
-* use-moment for next-js
-- install next-transpile-modules
-yarn add next-transpile-modules
-npm install --save next-transpile-modules
-* in next.config.js file
-const withTM = require('next-transpile-modules')(['use-moment'])
-
-module.exports = withTM({
-// next config code
-});
-
 ```
 
 ## Use package

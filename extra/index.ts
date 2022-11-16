@@ -1,7 +1,7 @@
 import moment from "moment";
 import {isUndefined} from "lodash";
 
-type DateMomentString = Date | string | moment.Moment
+type DateMomentString = Date | string | moment.Moment | moment.MomentInput
 
 const mmStartOfDay = (aTime: DateMomentString) => {
     return moment(aTime).startOf("day")

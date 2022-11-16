@@ -27,6 +27,7 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", {value: true}), mod);
 var format_exports = {};
 __export(format_exports, {
+    mmExp: () => mmExp,
     mmFormat: () => mmFormat,
     mmFormatDDD: () => mmFormatDDD,
     mmFormatDDDD: () => mmFormatDDDD,
@@ -66,8 +67,12 @@ const mmFormatYYYY = (aTime) => {
 const mmFormatYYYYMMDDHHMMSSZ = (aTime) => {
     return (0, import_moment.default)(aTime).utc().format("YYYYMMDDTHHmmss") + "Z";
 };
+const mmExp = (aTime) => {
+    return (0, import_moment.default)(aTime);
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+    mmExp,
     mmFormat,
     mmFormatDDD,
     mmFormatDDDD,

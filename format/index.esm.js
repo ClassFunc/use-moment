@@ -28,7 +28,11 @@ const mmFormatYYYY = (aTime) => {
 const mmFormatYYYYMMDDHHMMSSZ = (aTime) => {
   return moment(aTime).utc().format("YYYYMMDDTHHmmss") + "Z";
 };
+const mmExp = (aTime) => {
+  return moment(aTime);
+};
 export {
+  mmExp,
   mmFormat,
   mmFormatDDD,
   mmFormatDDDD,
