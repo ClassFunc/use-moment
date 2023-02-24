@@ -31,14 +31,14 @@ const mmExp = (aTime) => {
   return moment(aTime);
 };
 export {
-    mmExp,
-    mmFormat,
-    mmFormatDDD,
-    mmFormatDDDD,
-    mmFormatDDMM,
-    mmFormatMMDD,
-    mmFormatUTC,
-    mmFormatYYYY,
-    mmFormatYYYYMMDD,
-    mmFormatYYYYMMDDHHMMSSZ,
+  mmExp,
+  mmFormat,
+  mmFormatDDD,
+  mmFormatDDDD,
+  mmFormatDDMM,
+  mmFormatMMDD,
+  mmFormatUTC,
+  mmFormatYYYY,
+  mmFormatYYYYMMDD,
+  mmFormatYYYYMMDDHHMMSSZ,
 };

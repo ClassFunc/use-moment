@@ -7,7 +7,7 @@ var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
-    __defProp(target, name, {get: all[name], enumerable: true});
+    __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
   if ((from && typeof from === "object") || typeof from === "function") {
@@ -21,20 +21,20 @@ var __copyProps = (to, from, except, desc) => {
   return to;
 };
 var __toESM = (mod, isNodeMode, target) => (
-    (target = mod != null ? __create(__getProtoOf(mod)) : {}),
-        __copyProps(
-            // If the importer is in node compatibility mode or this is not an ESM
-            // file that has been converted to a CommonJS file using a Babel-
-            // compatible transform (i.e. "__esModule" has not been set), then set
-            // "default" to the CommonJS "module.exports" for node compatibility.
-            isNodeMode || !mod || !mod.__esModule
-                ? __defProp(target, "default", {value: mod, enumerable: true})
-                : target,
-            mod
-        )
+  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
+  __copyProps(
+    // If the importer is in node compatibility mode or this is not an ESM
+    // file that has been converted to a CommonJS file using a Babel-
+    // compatible transform (i.e. "__esModule" has not been set), then set
+    // "default" to the CommonJS "module.exports" for node compatibility.
+    isNodeMode || !mod || !mod.__esModule
+      ? __defProp(target, "default", { value: mod, enumerable: true })
+      : target,
+    mod
+  )
 );
 var __toCommonJS = (mod) =>
-    __copyProps(__defProp({}, "__esModule", {value: true}), mod);
+  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var calculator_exports = {};
 __export(calculator_exports, {
   mmAdd: () => mmAdd,
@@ -74,28 +74,28 @@ const mmDefaultUTC = (aTime, valueOf = false) => {
 };
 const mmDuration = (aTime, bTime, divisor) => {
   return (
-      ((0, import_moment.default)(aTime).valueOf() -
-          (0, import_moment.default)(bTime).valueOf()) /
-      divisor
+    ((0, import_moment.default)(aTime).valueOf() -
+      (0, import_moment.default)(bTime).valueOf()) /
+    divisor
   );
 };
 const mmDurationUTC = (aTime, bTime, divisor) => {
   return (
-      ((0, import_moment.default)(aTime).utc().valueOf() -
-          (0, import_moment.default)(bTime).utc().valueOf()) /
-      divisor
+    ((0, import_moment.default)(aTime).utc().valueOf() -
+      (0, import_moment.default)(bTime).utc().valueOf()) /
+    divisor
   );
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 &&
-(module.exports = {
-  mmAdd,
-  mmDefault,
-  mmDefaultUTC,
-  mmDiff,
-  mmDuration,
-  mmDurationUTC,
-  mmSet,
-  mmSubtract,
-  mmToDate,
-});
+  (module.exports = {
+    mmAdd,
+    mmDefault,
+    mmDefaultUTC,
+    mmDiff,
+    mmDuration,
+    mmDurationUTC,
+    mmSet,
+    mmSubtract,
+    mmToDate,
+  });

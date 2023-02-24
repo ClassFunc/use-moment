@@ -11,4 +11,4 @@ const mmRangeBy = (aTime, bTime, by, options) => {
 const mmRangeByArray = (aTime, bTime, by, options) => {
   return Array.from(mmRange.range(aTime, bTime).by(by));
 };
-export {mmRange, mmRangeBy, mmRangeByArray, mmRangeOnly};
+export { mmRange, mmRangeBy, mmRangeByArray, mmRangeOnly };

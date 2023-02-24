@@ -7,11 +7,11 @@ import * as mmRanges from "./range";
 import * as mmTimezone from "./timezone";
 
 export {
-    mmCalculators,
-    mmChecks,
-    mmExtras,
-    mmFormats,
-    mmLocales,
-    mmRanges,
-    mmTimezone,
+  mmCalculators,
+  mmChecks,
+  mmExtras,
+  mmFormats,
+  mmLocales,
+  mmRanges,
+  mmTimezone,
 };

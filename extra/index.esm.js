@@ -53,35 +53,35 @@ const mmWeeksDays = (aTime, weeks, days) => {
   return moment(aTime).weeks(weeks).days(days);
 };
 const mmWeek = (aTime, week) => {
-    if (!isUndefined(week)) return moment(aTime).week(week);
+  if (!isUndefined(week)) return moment(aTime).week(week);
   return moment(aTime).week();
 };
 const mmWeeks = (aTime, week) => {
-    if (!isUndefined(week)) return moment(aTime).weeks(week);
+  if (!isUndefined(week)) return moment(aTime).weeks(week);
   return moment(aTime).weeks();
 };
 const mmMonth = (aTime, month) => {
-    if (!isUndefined(month)) return moment(aTime).month(month);
+  if (!isUndefined(month)) return moment(aTime).month(month);
   return moment(aTime).month();
 };
 const mmMonths = (aTime, month) => {
-    if (!isUndefined(month)) return moment(aTime).months(month);
+  if (!isUndefined(month)) return moment(aTime).months(month);
   return moment(aTime).months();
 };
 const mmDate = (aTime, date) => {
-    if (!isUndefined(date)) return moment(aTime).date(date);
+  if (!isUndefined(date)) return moment(aTime).date(date);
   return moment(aTime).month();
 };
 const mmDates = (aTime, date) => {
-    if (!isUndefined(date)) return moment(aTime).dates(date);
+  if (!isUndefined(date)) return moment(aTime).dates(date);
   return moment(aTime).dates();
 };
 const mmWeekday = (aTime, day) => {
-    if (!isUndefined(day)) return moment(aTime).weekday(day);
+  if (!isUndefined(day)) return moment(aTime).weekday(day);
   return moment(aTime).weekday();
 };
 const mmIsoWeekday = (aTime, day) => {
-    if (!isUndefined(day)) return moment(aTime).isoWeekday(day);
+  if (!isUndefined(day)) return moment(aTime).isoWeekday(day);
   return moment(aTime).isoWeekday();
 };
 export {
@@ -99,15 +99,15 @@ export {
   mmMonth,
   mmMonths,
   mmStartOfDay,
-    mmStartOfIsoWeeks,
-    mmStartOfMonth,
-    mmStartOfMonths,
-    mmStartOfWeeks,
-    mmWeek,
-    mmWeekDay,
-    mmWeekDays,
-    mmWeekday,
-    mmWeeks,
-    mmWeeksDay,
-    mmWeeksDays,
+  mmStartOfIsoWeeks,
+  mmStartOfMonth,
+  mmStartOfMonths,
+  mmStartOfWeeks,
+  mmWeek,
+  mmWeekDay,
+  mmWeekDays,
+  mmWeekday,
+  mmWeeks,
+  mmWeeksDay,
+  mmWeeksDays,
 };

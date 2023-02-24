@@ -7,25 +7,25 @@ type DateMoment = Date | moment.Moment;
 const mmRange = extendMoment(Moment);
 
 const mmRangeOnly = (aTime: DateMoment, bTime: DateMoment) => {
-    return mmRange.range(aTime, bTime);
+  return mmRange.range(aTime, bTime);
 };
 
 const mmRangeBy = (
-    aTime: DateMoment,
-    bTime: DateMoment,
-    by: unitOfTime.Diff,
-    options?: { excludeEnd?: boolean; step?: number }
+  aTime: DateMoment,
+  bTime: DateMoment,
+  by: unitOfTime.Diff,
+  options?: { excludeEnd?: boolean; step?: number }
 ) => {
-    return mmRange.range(aTime, bTime).by(by);
+  return mmRange.range(aTime, bTime).by(by);
 };
 
 const mmRangeByArray = (
-    aTime: DateMoment,
-    bTime: DateMoment,
-    by: unitOfTime.Diff,
-    options?: { excludeEnd?: boolean; step?: number }
+  aTime: DateMoment,
+  bTime: DateMoment,
+  by: unitOfTime.Diff,
+  options?: { excludeEnd?: boolean; step?: number }
 ) => {
-    return Array.from(mmRange.range(aTime, bTime).by(by));
+  return Array.from(mmRange.range(aTime, bTime).by(by));
 };
 
-export {mmRange, mmRangeOnly, mmRangeBy, mmRangeByArray};
+export { mmRange, mmRangeOnly, mmRangeBy, mmRangeByArray };

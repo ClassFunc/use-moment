@@ -52,9 +52,9 @@ const mmIsoWeekDay = (aTime: DateMomentString, week: number, day: number) => {
 };
 
 const mmIsoWeeksDays = (
-    aTime: DateMomentString,
-    weeks: number,
-    days: number
+  aTime: DateMomentString,
+  weeks: number,
+  days: number
 ) => {
   return moment(aTime).isoWeeks(weeks).days(days);
 };
