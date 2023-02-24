@@ -1,4 +1,3 @@
-"use strict";
 import moment from "moment";
 
 const mmIsSame = (aTime, bTime, granularity) => {
@@ -23,11 +22,11 @@ const mmIsSameDate = (aTime, bTime, granularity = "date") => {
   return moment(aTime).isSame(bTime, granularity);
 };
 export {
-  mmIsAfter,
-  mmIsBefore,
-  mmIsBetween,
-  mmIsSame,
-  mmIsSameDate,
-  mmIsSameOrAfter,
-  mmIsSameOrBefore
+    mmIsAfter,
+    mmIsBefore,
+    mmIsBetween,
+    mmIsSame,
+    mmIsSameDate,
+    mmIsSameOrAfter,
+    mmIsSameOrBefore,
 };

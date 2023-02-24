@@ -1,6 +1,6 @@
 {
   "name": "use-moment",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "It's simpler to use moment js, support reactjs, nextjs, nodejs, typescripts, use esbuild",
   "main": "./index.cjs.js",
   "module": "./index.esm.js",
@@ -17,23 +17,25 @@
     "build:commit": "yarn run build && yarn generate-docs && git add --all && git commit -m 'build'",
     "watch": "node esbuild-watch.cjs",
     "generate-docs": "typedoc --plugin typedoc-plugin-markdown --readme ./README.md --out __docs__ index.ts",
-    "pre-publish": "npm publish --dry-run"
+    "pre-publish": "npm publish --dry-run",
+    "format": "yarn prettier --write ."
   },
   "author": "duongdam",
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.29.3",
+    "moment": "^2.29.4",
     "moment-range": "^4.0.2",
-    "moment-timezone": "^0.5.34"
+    "moment-timezone": "^0.5.40"
   },
   "devDependencies": {
-    "glob": "^7.2.0",
-    "esbuild": "^0.14.29",
-    "@types/lodash": "^4.14.180",
-    "esbuild-plugin-d.ts": "^1.1.0",
+    "@types/lodash": "^4.14.191",
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.30",
     "@types/node": "^18.0.0",
+    "esbuild": "^0.17.10",
+    "esbuild-plugin-d.ts": "^1.1.0",
+    "glob": "^7.2.0",
+    "prettier": "^2.8.4",
     "typescript": "^4.7.4"
   },
   "repository": "https://github.com/ClassFunc/use-moment",

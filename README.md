@@ -4,8 +4,7 @@ It's simpler to use moment js
 
 ## Notice
 
-The moment js library has a very large capacity, so we have written use-dayjs with the same mechanism but the capacity
-is very small, you can refer to:
+Same with use-dayjs, you can refer to:
 [https://www.npmjs.com/package/use-dayjs](https://www.npmjs.com/package/use-dayjs)
 
 ## Support for
@@ -20,8 +19,7 @@ is very small, you can refer to:
 ## Install package
 
 ```html
-npm i --save use-moment
-yarn add use-moment
+npm i --save use-moment yarn add use-moment
 ```
 
 ## Use package
