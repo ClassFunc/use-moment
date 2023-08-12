@@ -16,20 +16,20 @@ const mmSet = (aTime, objectLiteral) => {
   return moment(aTime).set(objectLiteral);
 };
 const mmDefault = (aTime, valueOf = false) => {
-  if (valueOf) return moment(aTime).valueOf();
+  if (valueOf)
+    return moment(aTime).valueOf();
   return moment(aTime);
 };
 const mmDefaultUTC = (aTime, valueOf = false) => {
-  if (valueOf) return moment(aTime).utc().valueOf();
+  if (valueOf)
+    return moment(aTime).utc().valueOf();
   return moment(aTime).utc();
 };
 const mmDuration = (aTime, bTime, divisor) => {
   return (moment(aTime).valueOf() - moment(bTime).valueOf()) / divisor;
 };
 const mmDurationUTC = (aTime, bTime, divisor) => {
-  return (
-    (moment(aTime).utc().valueOf() - moment(bTime).utc().valueOf()) / divisor
-  );
+  return (moment(aTime).utc().valueOf() - moment(bTime).utc().valueOf()) / divisor;
 };
 export {
   mmAdd,
@@ -40,5 +40,5 @@ export {
   mmDurationUTC,
   mmSet,
   mmSubtract,
-  mmToDate,
+  mmToDate
 };

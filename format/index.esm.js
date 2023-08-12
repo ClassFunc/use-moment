@@ -40,5 +40,5 @@ export {
   mmFormatUTC,
   mmFormatYYYY,
   mmFormatYYYYMMDD,
-  mmFormatYYYYMMDDHHMMSSZ,
+  mmFormatYYYYMMDDHHMMSSZ
 };

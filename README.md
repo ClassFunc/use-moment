@@ -19,21 +19,45 @@ Same with use-dayjs, you can refer to:
 ## Install package
 
 ```html
-npm i --save use-moment yarn add use-moment
+npm i --save use-moment
+
+yarn add use-moment
 ```
 
 ## Use package
 
-```ts
+```html
+Sample import moment range
 
-import {mmFormatDDD} from "use-moment/format";
-import {mmAdd} from "use-moment/calculator";
-import {mmSetLocale} from "use-moment/locale";
+* mmRanges
+1.mmRange
+import * as moment from "../index";
+import {extendMoment} from 'moment-range';
+const mmRange = extendMoment(moment);
 
-*
-mmCalculators
-let _now = new Date()
+let aTime = new Date()
+let bTime = new Date("2022-06-30")
+2. mmRangeOnly
+use: mmRangeOnly(aTime, bTime)
+//output: t {start: Moment<2022-06-28T10:35:40+07:00>, end: Moment<2022-06-30T07:00:00+07:00>}
+3. mmRangeBy
+use: mmRangeBy(aTime, bTime, "days")
+//output: { [Symbol(Symbol.iterator)]: [Function (anonymous)] }
 
+4. mmRangeByArray
+use: mmRangeByArray(aTime, bTime, "days")
+//output: [Moment<2022-06-28T10:38:53+07:00>, Moment<2022-06-29T10:38:53+07:00>]
+//This array include moment value
+
+* mmTimezone
+1. mmByZone
+use: mmFormat(mmByZone(aTime, 'Asia/Tokyo'))
+//output: 2022-06-28T12:38:53+09:00
+2. mmGuestZone
+use: mmGuestZone()
+//output: Asia/Saigon
+
+* mmConverts
 1.
 mmToDate
 mmToDate(_now) // output: 2022-06-28T03:14:40.895Z
@@ -91,32 +115,4 @@ mmIsSameDate // output: true/false
 12. mmIsoWeekDay
 13. mmIsoWeeksDays
 
-* mmRanges
-1.
-mmRange
-import * as moment from "../index";
-import {extendMoment} from 'moment-range';
-const mmRange = extendMoment(moment);
-
-let aTime = new Date()
-let bTime = new Date("2022-06-30")
-2. mmRangeOnly
-use: mmRangeOnly(aTime, bTime)
-//output: t {start: Moment<2022-06-28T10:35:40+07:00>, end: Moment<2022-06-30T07:00:00+07:00>}
-3. mmRangeBy
-use: mmRangeBy(aTime, bTime, "days")
-//output: { [Symbol(Symbol.iterator)]: [Function (anonymous)] }
-
-4. mmRangeByArray
-use: mmRangeByArray(aTime, bTime, "days")
-//output: [Moment<2022-06-28T10:38:53+07:00>, Moment<2022-06-29T10:38:53+07:00>]
-//This array include moment value
-
-* mmTimezone
-1. mmByZone
-use: mmFormat(mmByZone(aTime, 'Asia/Tokyo'))
-//output: 2022-06-28T12:38:53+09:00
-2. mmGuestZone
-use: mmGuestZone()
-//output: Asia/Saigon
 ```

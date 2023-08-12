@@ -13,5 +13,5 @@ export {
   mmFormats,
   mmLocales,
   mmRanges,
-  mmTimezone,
+  mmTimezone
 };

@@ -10,31 +10,22 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
-  if ((from && typeof from === "object") || typeof from === "function") {
+  if (from && typeof from === "object" || typeof from === "function") {
     for (let key of __getOwnPropNames(from))
       if (!__hasOwnProp.call(to, key) && key !== except)
-        __defProp(to, key, {
-          get: () => from[key],
-          enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable,
-        });
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (
-  (target = mod != null ? __create(__getProtoOf(mod)) : {}),
-  __copyProps(
-    // If the importer is in node compatibility mode or this is not an ESM
-    // file that has been converted to a CommonJS file using a Babel-
-    // compatible transform (i.e. "__esModule" has not been set), then set
-    // "default" to the CommonJS "module.exports" for node compatibility.
-    isNodeMode || !mod || !mod.__esModule
-      ? __defProp(target, "default", { value: mod, enumerable: true })
-      : target,
-    mod
-  )
-);
-var __toCommonJS = (mod) =>
-  __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var extra_exports = {};
 __export(extra_exports, {
   mmDate: () => mmDate,
@@ -61,7 +52,7 @@ __export(extra_exports, {
   mmWeekday: () => mmWeekday,
   mmWeeks: () => mmWeeks,
   mmWeeksDay: () => mmWeeksDay,
-  mmWeeksDays: () => mmWeeksDays,
+  mmWeeksDays: () => mmWeeksDays
 });
 module.exports = __toCommonJS(extra_exports);
 var import_moment = __toESM(require("moment"));
@@ -158,31 +149,30 @@ const mmIsoWeekday = (aTime, day) => {
   return (0, import_moment.default)(aTime).isoWeekday();
 };
 // Annotate the CommonJS export names for ESM import in node:
-0 &&
-  (module.exports = {
-    mmDate,
-    mmDates,
-    mmEndOfDay,
-    mmEndOfIsoWeeks,
-    mmEndOfMonth,
-    mmEndOfMonths,
-    mmEndOfWeek,
-    mmEndOfWeeks,
-    mmIsoWeekDay,
-    mmIsoWeekday,
-    mmIsoWeeksDays,
-    mmMonth,
-    mmMonths,
-    mmStartOfDay,
-    mmStartOfIsoWeeks,
-    mmStartOfMonth,
-    mmStartOfMonths,
-    mmStartOfWeeks,
-    mmWeek,
-    mmWeekDay,
-    mmWeekDays,
-    mmWeekday,
-    mmWeeks,
-    mmWeeksDay,
-    mmWeeksDays,
-  });
+0 && (module.exports = {
+  mmDate,
+  mmDates,
+  mmEndOfDay,
+  mmEndOfIsoWeeks,
+  mmEndOfMonth,
+  mmEndOfMonths,
+  mmEndOfWeek,
+  mmEndOfWeeks,
+  mmIsoWeekDay,
+  mmIsoWeekday,
+  mmIsoWeeksDays,
+  mmMonth,
+  mmMonths,
+  mmStartOfDay,
+  mmStartOfIsoWeeks,
+  mmStartOfMonth,
+  mmStartOfMonths,
+  mmStartOfWeeks,
+  mmWeek,
+  mmWeekDay,
+  mmWeekDays,
+  mmWeekday,
+  mmWeeks,
+  mmWeeksDay,
+  mmWeeksDays
+});

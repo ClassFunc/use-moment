@@ -28,5 +28,5 @@ export {
   mmIsSame,
   mmIsSameDate,
   mmIsSameOrAfter,
-  mmIsSameOrBefore,
+  mmIsSameOrBefore
 };
